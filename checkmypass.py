@@ -23,7 +23,6 @@ def pwned_api_check(password):
     first_5_char, tail = sha1password[:5], sha1password[5: ]
     response = request_api_data(first_5_char)
     return get_password_leaks_count(response, tail)
-    # sha1password = hashlib.sha1(password.encode())
 
 def main(args):
     for password in args:
